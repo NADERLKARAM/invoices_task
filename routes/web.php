@@ -23,3 +23,4 @@ Route::post('/invoices', [InvoiceController::class, 'store'])->name('invoices.st
 Route::get('/invoices/{invoice}', [InvoiceController::class, 'show'])->name('invoices.show');
 Route::get('/invoices/{invoice}/print', [InvoiceController::class,'print'])->name('invoices.print');
 Route::get('/invoices', [InvoiceController::class, 'index'])->name('invoices.index');
+Route::delete('invoices/{id}', [InvoiceController::class, 'destroy'])->name('invoices.destroy');

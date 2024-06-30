@@ -86,4 +86,13 @@ class InvoiceController extends Controller
         // Stream or download PDF to user
         return $pdf->stream('invoice_'.$invoice->id.'.pdf');
     }
+
+
+    public function destroy($id)
+{
+    $invoice = Invoice::findOrFail($id);
+    $invoice->delete();
+
+    return redirect()->route('invoices.index')->with('success', 'Invoice deleted successfully');
+}
     }

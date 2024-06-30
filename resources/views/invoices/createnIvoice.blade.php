@@ -22,7 +22,7 @@
           </div>
         @endif
 
-        <form method="post" action="{{ route('invoices.store') }}" enctype="multipart/form-data" oninput="updateTotals()">
+        <form method="post" action="{{ secure_url('invoices.store') }}" enctype="multipart/form-data" oninput="updateTotals()">
             @csrf
 
             <!-- Customer Details -->
@@ -73,7 +73,7 @@
 
         <div class="col-sm-6">
             <div class="mt-4 text-right">
-                <a href="{{ route('invoices.index') }}" class="btn btn-primary">All Invoices</a>
+                <a href="{{ route('invoices.index') }}" class="btn btn-primary">List Of Invoices</a>
             </div>
         </div>
       </div>
